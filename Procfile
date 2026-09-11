@@ -1,0 +1,2 @@
+web: fastapi run main.py --port $PORT
+
