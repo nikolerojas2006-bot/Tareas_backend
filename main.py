@@ -28,10 +28,10 @@ DATABASE_URL = os.getenv("DATABASE_URL","mysql+pymysql://root@localhost/mis_tare
 
 # Ajuste necesario para SQLalchemy si usamos MySQL en Railway
 if DATABASE_URL.startswith("mysql://"):
-        DATABASE_URL = DATABASE_URL.REPLACE("mysql://","mysql+pymysql://",1)
+        DATABASE_URL = DATABASE_URL.replace("mysql://","mysql+pymysql://",1)
         
 # Ajuste por si tenemos PostgreSQL  en Railway
-elif DATABASE_URL.startswith("postgress://"):
+elif DATABASE_URL.startswith("postgres://"):
     DATABASE_URL = DATABASE_URL.replace("postgres://","postgresql://",1)
 
 # Crea el motor de conexión para la base de datos
